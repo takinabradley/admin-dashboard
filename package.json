@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "test": "jest --watchAll",
-    "build": "webpack && cp ./src/index.css ./dist/index.css",
+    "build": "webpack",
     "watch": "webpack --watch",
     "start": "webpack serve --open"
   },

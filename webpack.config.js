@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { template } = require('@babel/core')
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/index.js',
   devtool: 'inline-source-map',
   devServer: {
@@ -27,8 +27,8 @@ module.exports = {
         test: /\.css$/i,
         use: [
           // The `injectType`  option can be avoided because it is default behaviour
-          { loader: "style-loader", options: { injectType: "linkTag" } },
-          "file-loader",
+          { loader: "style-loader", options: { injectType: "styleTag" } },
+          "css-loader",
         ],
       },
       {
