@@ -1,8 +1,8 @@
 const sidebar = document.querySelector('.sidebar')
-const menu = document.querySelector('.hamburger-menu')
-menu.addEventListener('click', toggleSidebar)
 
-function toggleSidebar() {
+
+
+export default function toggleSidebar() {
   const body = document.querySelector('body')
   if (window.getComputedStyle(sidebar).display === 'none') {
     body.style.gridTemplateAreas = `
