@@ -5,12 +5,12 @@ const { template } = require('@babel/core')
 module.exports = {
   mode: 'production',
   entry: './src/index.js',
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   devServer: {
     static: './dist',
     hot: false
   },
-   plugins: [
+  plugins: [
     new HtmlWebpackPlugin({
       title: 'Admin Dashboard',
       template: './src/index.html'
@@ -42,7 +42,7 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: [
-              ['@babel/preset-env', { targets: 'defaults' }]
+              ['@babel/preset-env']
             ]
           }
         }
